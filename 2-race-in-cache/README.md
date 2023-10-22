@@ -4,9 +4,13 @@ Given is some code to cache key-value pairs from a mock database into
 the main memory (to reduce access time). The code is buggy and
 contains a race condition. Change the code to make this thread safe.
 
-Also, try to get your solution down to less than 30 seconds to run tests.  *Hint*: fetching from the database takes the longest.
+Also, try to get your solution down to less than 30 seconds to run tests.  
+*Hint*: fetching from the database takes the longest.
 
-*Note*: Map access is unsafe only when updates are occurring. As long as all goroutines are only reading and not changing the map, it is safe to access the map concurrently without synchronization. (See [https://golang.org/doc/faq#atomic_maps](https://golang.org/doc/faq#atomic_maps))
+*Note*: Map access is unsafe only when updates are occurring. 
+As long as all goroutines are only reading and not changing the map, 
+it is safe to access the map concurrently without synchronization. 
+(See [https://golang.org/doc/faq#atomic_maps](https://golang.org/doc/faq#atomic_maps))
 
 If possible, get your solution down to less than 5 seconds for all tests.
 
